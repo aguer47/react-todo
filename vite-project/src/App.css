@@ -1,0 +1,153 @@
+.app {
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+}
+
+.new-todo-form {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.form-row label {
+  color: #334155;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.form-row input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: #0f172a;
+  font: inherit;
+  padding: 12px 14px;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.form-row input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
+  outline: none;
+}
+
+.header {
+  margin: 0 0 18px;
+  color: #0f172a;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  line-height: 1;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.list:empty {
+  display: none;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+}
+
+.list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  color: #1e293b;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.list input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: #2563eb;
+}
+
+.list input[type='checkbox']:checked + span {
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.list .empty-state {
+  display: block;
+  color: #64748b;
+  text-align: center;
+}
+
+.btn {
+  border: 0;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 12px 16px;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+.btn-danger {
+  flex: 0 0 auto;
+  background: #dc2626;
+  padding: 9px 12px;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 520px) {
+  .app {
+    padding: 20px;
+  }
+
+  .list li {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .btn-danger {
+    width: 100%;
+  }
+}
